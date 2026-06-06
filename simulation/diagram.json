@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "MicroDiff Project",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": -120, "left": 150, "attrs": { "pins": "i2c" } },
+    { "type": "wokwi-servo", "id": "servo", "top": 100, "left": 200, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd:SDA", "uno:A4", "green", [ "v0" ] ],
+    [ "lcd:SCL", "uno:A5", "blue", [ "v0" ] ],
+    [ "lcd:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "lcd:GND", "uno:GND", "black", [ "v0" ] ],
+    [ "servo:PWM", "uno:9", "orange", [ "v0" ] ],
+    [ "servo:V+", "uno:5V", "red", [ "v0" ] ],
+    [ "servo:GND", "uno:GND", "black", [ "v0" ] ]
+  ]
+}
